@@ -1,0 +1,28 @@
+package com.example.vehicle.rules.vehicle;
+unit VehicleUnitData;
+
+rule "Car Rule using list of subclasses"
+  when
+    $c : /carInstances[ currentPassengers > maxPassengers ]
+  then
+    modify($c){setOverloaded(true)};
+end
+
+rule "Truck Rule using list of subclasses"
+  when
+    $t : /truckInstances[currentCargoWeight > maxCargoWeight]
+  then
+    modify($t){setOverloaded(true)};
+end
+
+query "GetOverloadedCars"
+  $c: /carInstances[overloaded]
+end
+
+query "GetOverloadedTrucks"
+  $t: /truckInstances[overloaded]
+end
+
+query "GetOverloadedVehicles"
+  $t: /vehicleInstances[overloaded]
+end
