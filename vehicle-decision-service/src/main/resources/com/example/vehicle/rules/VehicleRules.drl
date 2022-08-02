@@ -1,4 +1,4 @@
-package com.example.vehicle.rules.vehicle;
+package com.example.vehicle.rules;
 unit VehicleUnitData;
 
 rule "Car Rule using list of subclasses"

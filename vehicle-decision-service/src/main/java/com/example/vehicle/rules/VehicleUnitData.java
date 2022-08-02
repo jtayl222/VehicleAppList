@@ -1,4 +1,4 @@
-package com.example.vehicle.rules.vehicle;
+package com.example.vehicle.rules;
 
 import com.example.vehicle.datamodel.Vehicle;
 import com.example.vehicle.datamodel.Car;
